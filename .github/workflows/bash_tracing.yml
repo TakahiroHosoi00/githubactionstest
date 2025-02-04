@@ -14,6 +14,12 @@ jobs:
     steps:
     - name: set -x test
       run: |
+        echo "::group::set-x"
         set -x
+        echo "::endgroup::"
+        echo "::group::date"
         date
+        echo "::endgroup::"
+        echo "::group::hostname"
         hostname
+        echo "::endgroup::"
