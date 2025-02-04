@@ -1,0 +1,19 @@
+# This is a basic workflow that is manually triggered
+
+name: Bash tracing
+
+# Controls when the action will run. Workflow runs when manually triggered using the UI
+# or API.
+on:
+  workflow_dispatch:
+
+jobs:
+  log:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: set -x test
+      run: |
+        set -x
+        date
+        hostname
